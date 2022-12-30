@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -e
 
 wew | while read e w a; do
 	case $e in
