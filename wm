@@ -1,15 +1,15 @@
 #!/bin/sh
 
 wew | while read e w a; do
-    case $e in
-        MAP)
-            if ! wattr o $w; then
-                focus $w
-                workspace s $w $(workspace c)
-            fi
-            ;;
-        UNMAP)
-            wattr "$(pfw 2> /dev/null)" || focus p
-            ;;
-    esac
+	case $e in
+		MAP)
+			if ! wattr o $w; then
+				focus $w
+				workspace s $w $(workspace c)
+			fi
+			;;
+		UNMAP)
+			wattr "$(pfw 2> /dev/null)" || focus p
+			;;
+	esac
 done
